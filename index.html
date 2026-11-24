@@ -1,10 +1,134 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Dialog IQ</title>
-  </head>
-  <body>
-    <h1>Welcome to Dialog IQ</h1>
-    <p>IQ of Humans</p>
-  </body>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090e">
+  <meta name="description" content="NOXAR - Beyond the Known. عالم من الترفيه والمعرفة والاكتشاف.">
+  <title>NOXAR | Beyond the Known</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo">NOX<span>AR</span></a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#home" class="nav-active">الرئيسية</a>
+    <a href="#library">المكتبة</a>
+    <a href="#movies">الأفلام</a>
+    <a href="#anime">الأنمي</a>
+    <a href="#education">التعليم</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="searchToggle" aria-label="بحث">⌕</button>
+    <button class="menu-btn" id="menuToggle" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<div class="search-panel" id="searchPanel">
+  <input id="searchInput" type="search" placeholder="ابحث عن فيلم أو أنمي أو محتوى...">
+</div>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label">THE WORLD WITHOUT LIMITS</span>
+      <h1>عالم آخر.<br><span>بلا حدود.</span></h1>
+      <p>
+        اكتشف عالماً يجمع الترفيه والمعرفة والإبداع.
+        مكتبة مفتوحة لكل ما يستحق المشاهدة والاكتشاف.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="exploreBtn">استكشف المكتبة <span>←</span></button>
+        <button class="btn-outline" id="aboutBtn">عن NOXAR</button>
+      </div>
+      <div class="hero-caption">
+        <span class="pulse"></span>
+        عالم جديد ينتظرك
+      </div>
+    </div>
+    <div class="hero-mark">N</div>
+  </section>
+
+  <section class="categories" id="library">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">DISCOVER MORE</span>
+        <h2>استكشف العوالم</h2>
+      </div>
+    </div>
+
+    <div class="category-list" id="categoryList">
+      <button class="category active" data-category="all">الكل</button>
+      <button class="category" data-category="movie">🎬 الأفلام</button>
+      <button class="category" data-category="anime">🍥 الأنمي</button>
+      <button class="category" data-category="education">🎓 التعليم</button>
+      <button class="category" data-category="documentary">🌍 الوثائقيات</button>
+      <button class="category" data-category="cartoon">🎨 الكرتون</button>
+    </div>
+  </section>
+
+  <section class="content-section" id="movies">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">HANDPICKED FOR YOU</span>
+        <h2>محتوى يستحق المشاهدة</h2>
+      </div>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <div class="content-grid" id="contentGrid">
+      <div class="loading">جاري تجهيز المكتبة...</div>
+    </div>
+  </section>
+
+  <section class="features" id="about">
+    <div class="feature">
+      <span class="feature-icon">◈</span>
+      <h3>عالم مفتوح</h3>
+      <p>محتوى متنوع من مختلف أنحاء العالم.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">∞</span>
+      <h3>اكتشاف بلا حدود</h3>
+      <p>تعلم واكتشف وشاهد أشياء جديدة.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">✦</span>
+      <h3>مجاني للجميع</h3>
+      <p>هدفنا أن يكون الوصول للمحتوى متاحاً للجميع.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="#" class="logo">NOX<span>AR</span></a>
+  <p>BEYOND THE KNOWN.</p>
+  <p class="copyright">© <span id="year"></span> NOXAR. All rights reserved.</p>
+  <span class="footer-note">A WORLD OF DISCOVERY</span>
+</footer>
+
+<div class="player-modal" id="playerModal">
+  <div class="player-container">
+    <div class="player-header">
+      <span class="logo">NOX<span>AR</span></span>
+      <button id="closePlayer" class="close-btn">✕</button>
+    </div>
+    <div class="video-container" id="videoContainer"></div>
+    <div class="player-details">
+      <h2 id="playerTitle"></h2>
+      <p id="playerDescription"></p>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
 </html>
